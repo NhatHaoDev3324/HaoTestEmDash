@@ -8,38 +8,11 @@ const { tags, class: className } = Astro.props;
 ---
 
 {tags.length > 0 && (
-  <ul class:list={["tag-list", className]}>
+  <ul class:list={["flex flex-wrap gap-2 list-none p-0 m-0", className]}>
     {tags.map((tag) => (
       <li>
-        <a href={`/tag/${tag.slug}`} class="tag">{tag.label}</a>
+        <a href={`/tag/${tag.slug}`} class="inline-block py-0.5 px-3 text-sm text-text-secondary bg-surface rounded-sm no-underline transition-[color_120ms,background_120ms] hover:text-text hover:bg-border">{tag.label}</a>
       </li>
     ))}
   </ul>
 )}
-
-<style>
-  .tag-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: var(--spacing-2);
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-
-  .tag {
-    display: inline-block;
-    padding: var(--tag-padding-y) var(--spacing-3);
-    font-size: var(--font-size-sm);
-    color: var(--color-text-secondary);
-    background: var(--color-surface);
-    border-radius: var(--radius);
-    text-decoration: none;
-    transition: color var(--transition-fast), background var(--transition-fast);
-  }
-
-  .tag:hover {
-    color: var(--color-text);
-    background: var(--color-border);
-  }
-</style>

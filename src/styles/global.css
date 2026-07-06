@@ -1,0 +1,234 @@
+@import "tailwindcss";
+
+/* ============================================================
+   Design tokens — Tailwind v4 @theme
+   Values mirror the original :root block in Base.astro
+   ============================================================ */
+
+@theme {
+  /* Colors - Light mode */
+  --color-bg: #ffffff;
+  --color-bg-subtle: #fafafa;
+  --color-text: #1a1a1a;
+  --color-text-secondary: #525252;
+  --color-muted: #8b8b8b;
+  --color-border: #e5e5e5;
+  --color-border-subtle: #f0f0f0;
+  --color-surface: #f7f7f7;
+  --color-accent: #0066cc;
+  --color-accent-hover: #0052a3;
+  --color-on-accent: white;
+  --color-accent-ring: color-mix(in srgb, var(--color-accent) 25%, transparent);
+
+  /* EmDash search theming */
+  --color-emdash-search-bg: var(--color-bg);
+  --color-emdash-search-text: var(--color-text);
+  --color-emdash-search-muted: var(--color-muted);
+  --color-emdash-search-border: var(--color-border);
+  --color-emdash-search-hover: var(--color-surface);
+  --color-emdash-search-highlight: var(--color-text);
+
+  /* Font families */
+  --font-family-sans: var(--font-sans);
+  --font-family-mono: var(--font-mono);
+
+  /* Font sizes */
+  --font-size-xs: 0.8125rem;
+  --font-size-sm: 0.875rem;
+  --font-size-base: 1rem;
+  --font-size-lg: 1.125rem;
+  --font-size-xl: 1.25rem;
+  --font-size-2xl: 1.5rem;
+  --font-size-3xl: 2rem;
+  --font-size-4xl: 2.5rem;
+  --font-size-5xl: 3.5rem;
+
+  /* Line heights */
+  --leading-tight: 1.15;
+  --leading-snug: 1.3;
+  --leading-normal: 1.5;
+  --leading-relaxed: 1.7;
+
+  /* Letter spacing */
+  --tracking-tight: -0.03em;
+  --tracking-snug: -0.02em;
+  --tracking-wide: 0.06em;
+  --tracking-wider: 0.08em;
+
+  /* Spacing scale */
+  --spacing-1: 0.25rem;
+  --spacing-2: 0.5rem;
+  --spacing-3: 0.75rem;
+  --spacing-4: 1rem;
+  --spacing-5: 1.25rem;
+  --spacing-6: 1.5rem;
+  --spacing-8: 2rem;
+  --spacing-10: 2.5rem;
+  --spacing-12: 3rem;
+  --spacing-16: 4rem;
+  --spacing-20: 5rem;
+  --spacing-24: 6rem;
+
+  /* Layout dimensions */
+  --spacing-nav-height: 64px;
+  --spacing-search-input-width: 180px;
+  --spacing-meta-col-width: 180px;
+  --spacing-gutter-width: 200px;
+  --spacing-content-width: 680px;
+  --spacing-wide-width: 1200px;
+  --spacing-max-width: 680px;
+
+  /* Avatar sizes */
+  --spacing-avatar-xs: 18px;
+  --spacing-avatar-sm: 20px;
+  --spacing-avatar-md: 24px;
+  --spacing-avatar-lg: 32px;
+
+  /* Borders & radius */
+  --radius-sm: 4px;
+  --radius-lg: 8px;
+
+  /* Transitions */
+  --transition-fast: 120ms ease;
+  --transition-base: 180ms ease;
+
+  /* Shadows */
+  --shadow-dropdown: 0 8px 30px rgba(0, 0, 0, 0.12);
+  --shadow-btn-active: 0 1px 2px rgba(0, 0, 0, 0.05);
+
+  /* Legacy spacing aliases for backward compatibility */
+  --spacing-xs: 0.25rem;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 1.5rem;
+  --spacing-xl: 2rem;
+  --spacing-2xl: 3rem;
+  --spacing-3xl: 4rem;
+}
+
+/* ============================================================
+   Dark mode colors
+   Overrides CSS variables when <html class="dark"> is present
+   ============================================================ */
+
+:root.dark {
+  --color-bg: #0d0d0d;
+  --color-bg-subtle: #141414;
+  --color-text: #ededed;
+  --color-text-secondary: #a0a0a0;
+  --color-muted: #6b6b6b;
+  --color-border: #2a2a2a;
+  --color-border-subtle: #1f1f1f;
+  --color-surface: #181818;
+  --color-accent: #4d9fff;
+  --color-accent-hover: #6eb0ff;
+  --color-accent-ring: color-mix(in srgb, var(--color-accent) 25%, transparent);
+  --shadow-dropdown: 0 8px 30px rgba(0, 0, 0, 0.3);
+  --shadow-btn-active: 0 1px 2px rgba(0, 0, 0, 0.15);
+}
+
+/* Media query dark mode (when no explicit class is set) */
+@media (prefers-color-scheme: dark) {
+  :root:not(.light) {
+    --color-bg: #0d0d0d;
+    --color-bg-subtle: #141414;
+    --color-text: #ededed;
+    --color-text-secondary: #a0a0a0;
+    --color-muted: #6b6b6b;
+    --color-border: #2a2a2a;
+    --color-border-subtle: #1f1f1f;
+    --color-surface: #181818;
+    --color-accent: #4d9fff;
+    --color-accent-hover: #6eb0ff;
+    --color-accent-ring: color-mix(in srgb, var(--color-accent) 25%, transparent);
+    --shadow-dropdown: 0 8px 30px rgba(0, 0, 0, 0.3);
+    --shadow-btn-active: 0 1px 2px rgba(0, 0, 0, 0.15);
+  }
+}
+
+/* ============================================================
+   Base layer reset
+   ============================================================ */
+
+@layer base {
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  body,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  ul,
+  ol,
+  figure,
+  blockquote,
+  dl,
+  dd {
+    margin: 0;
+  }
+
+  ul,
+  ol {
+    padding: 0;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    font-size: var(--font-size-base);
+    line-height: var(--leading-relaxed);
+    color: var(--color-text);
+    background: var(--color-bg);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    min-height: 100vh;
+  }
+
+  a:where(:not([class*="emdash"]):not([class*="ec-"])) {
+    color: var(--color-accent);
+    text-decoration: none;
+    transition: color var(--transition-fast);
+  }
+
+  a:where(:not([class*="emdash"]):not([class*="ec-"])):hover {
+    color: var(--color-accent-hover);
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-sans);
+    line-height: var(--leading-tight);
+    font-weight: 600;
+    letter-spacing: var(--tracking-snug);
+  }
+
+  h1 {
+    font-weight: 700;
+    letter-spacing: var(--tracking-tight);
+  }
+
+  ::selection {
+    background: var(--color-accent);
+    color: white;
+  }
+}

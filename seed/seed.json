@@ -2,63 +2,63 @@
 	"$schema": "https://emdashcms.com/seed.schema.json",
 	"version": "1",
 	"meta": {
-		"name": "Blog Starter",
-		"description": "A blog with posts and pages",
+		"name": "Blog khởi đầu",
+		"description": "Một blog với bài viết và trang",
 		"author": "EmDash"
 	},
 	"settings": {
-		"title": "My Blog",
-		"tagline": "Thoughts on building for the web"
+		"title": "Blog của tôi",
+		"tagline": "Suy nghĩ về việc xây dựng cho web"
 	},
 	"collections": [
 		{
 			"slug": "posts",
-			"label": "Posts",
-			"labelSingular": "Post",
+			"label": "Bài viết",
+			"labelSingular": "Bài viết",
 			"supports": ["drafts", "revisions", "search", "seo"],
 			"commentsEnabled": true,
 			"fields": [
 				{
 					"slug": "title",
-					"label": "Title",
+					"label": "Tiêu đề",
 					"type": "string",
 					"required": true,
 					"searchable": true
 				},
 				{
 					"slug": "featured_image",
-					"label": "Featured Image",
+					"label": "Ảnh nổi bật",
 					"type": "image"
 				},
 				{
 					"slug": "content",
-					"label": "Content",
+					"label": "Nội dung",
 					"type": "portableText",
 					"searchable": true
 				},
 				{
 					"slug": "excerpt",
-					"label": "Excerpt",
+					"label": "Tóm tắt",
 					"type": "text"
 				}
 			]
 		},
 		{
 			"slug": "pages",
-			"label": "Pages",
-			"labelSingular": "Page",
+			"label": "Trang",
+			"labelSingular": "Trang",
 			"supports": ["drafts", "revisions", "search"],
 			"fields": [
 				{
 					"slug": "title",
-					"label": "Title",
+					"label": "Tiêu đề",
 					"type": "string",
 					"required": true,
 					"searchable": true
 				},
 				{
 					"slug": "content",
-					"label": "Content",
+					"label": "Nội dung",
 					"type": "portableText",
 					"searchable": true
 				}
@@ -68,47 +68,47 @@
 	"taxonomies": [
 		{
 			"name": "category",
-			"label": "Categories",
-			"labelSingular": "Category",
+			"label": "Danh mục",
+			"labelSingular": "Danh mục",
 			"hierarchical": true,
 			"collections": ["posts"],
 			"terms": [
 				{
 					"slug": "development",
-					"label": "Development"
+					"label": "Phát triển"
 				},
 				{
 					"slug": "design",
-					"label": "Design"
+					"label": "Thiết kế"
 				},
 				{
 					"slug": "notes",
-					"label": "Notes"
+					"label": "Ghi chú"
 				}
 			]
 		},
 		{
 			"name": "tag",
-			"label": "Tags",
-			"labelSingular": "Tag",
+			"label": "Thẻ",
+			"labelSingular": "Thẻ",
 			"hierarchical": false,
 			"collections": ["posts"],
 			"terms": [
 				{
 					"slug": "webdev",
-					"label": "Web Development"
+					"label": "Phát triển Web"
 				},
 				{
 					"slug": "opinion",
-					"label": "Opinion"
+					"label": "Ý kiến"
 				},
 				{
 					"slug": "tools",
-					"label": "Tools"
+					"label": "Công cụ"
 				},
 				{
 					"slug": "creativity",
-					"label": "Creativity"
+					"label": "Sáng tạo"
 				}
 			]
 		}
@@ -117,33 +117,33 @@
 		{
 			"id": "byline-editorial",
 			"slug": "emdash-editorial",
-			"displayName": "EmDash Editorial"
+			"displayName": "Ban Biên tập EmDash"
 		},
 		{
 			"id": "byline-guest",
 			"slug": "guest-contributor",
-			"displayName": "Guest Contributor",
+			"displayName": "Cộng tác viên",
 			"isGuest": true
 		}
 	],
 	"menus": [
 		{
 			"name": "primary",
-			"label": "Primary Navigation",
+			"label": "Điều hướng Chính",
 			"items": [
 				{
 					"type": "custom",
-					"label": "Home",
+					"label": "Trang chủ",
 					"url": "/"
 				},
 				{
 					"type": "custom",
-					"label": "About",
+					"label": "Giới thiệu",
 					"url": "/pages/about"
 				},
 				{
 					"type": "custom",
-					"label": "Posts",
+					"label": "Bài viết",
 					"url": "/posts"
 				}
 			]
@@ -152,28 +152,28 @@
 	"widgetAreas": [
 		{
 			"name": "sidebar",
-			"label": "Sidebar",
-			"description": "Widget area displayed on single post pages",
+			"label": "Thanh bên",
+			"description": "Khu vực widget hiển thị trên trang bài viết",
 			"widgets": [
 				{
 					"type": "component",
 					"componentId": "core:search",
-					"title": "Search"
+					"title": "Tìm kiếm"
 				},
 				{
 					"type": "component",
 					"componentId": "core:categories",
-					"title": "Categories"
+					"title": "Danh mục"
 				},
 				{
 					"type": "component",
 					"componentId": "core:tags",
-					"title": "Tags"
+					"title": "Thẻ"
 				},
 				{
 					"type": "component",
 					"componentId": "core:recent-posts",
-					"title": "Recent Posts",
+					"title": "Bài viết gần đây",
 					"settings": {
 						"count": 5,
 						"showDate": true
@@ -182,7 +182,7 @@
 				{
 					"type": "component",
 					"componentId": "core:archives",
-					"title": "Archives",
+					"title": "Lưu trữ",
 					"settings": {
 						"type": "monthly",
 						"limit": 6
@@ -192,12 +192,12 @@
 		},
 		{
 			"name": "footer",
-			"label": "Footer",
-			"description": "Widget area displayed in the site footer",
+			"label": "Chân trang",
+			"description": "Khu vực widget hiển thị ở chân trang",
 			"widgets": [
 				{
 					"type": "content",
-					"title": "About",
+					"title": "Giới thiệu",
 					"content": [
 						{
 							"_type": "block",
@@ -205,7 +205,7 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "A blog about software, design, and the occasional stray thought.",
+									"text": "Một blog về phần mềm, thiết kế và đôi khi là những suy nghĩ vu vơ.",
 									"_key": "k1"
 								}
 							],
@@ -219,9 +219,9 @@
 	"sections": [
 		{
 			"slug": "newsletter-signup",
-			"title": "Newsletter Signup",
-			"description": "A call-to-action block for newsletter subscriptions",
-			"keywords": ["newsletter", "subscribe", "email", "cta"],
+			"title": "Đăng ký Nhận tin",
+			"description": "Khối kêu gọi hành động đăng ký nhận tin",
+			"keywords": ["nhận tin", "đăng ký", "email", "kêu gọi"],
 			"source": "theme",
 			"content": [
 				{
@@ -230,7 +230,7 @@
 					"children": [
 						{
 							"_type": "span",
-							"text": "Stay in the loop",
+							"text": "Luôn cập nhật",
 							"_key": "k1"
 						}
 					],
@@ -242,7 +242,7 @@
 					"children": [
 						{
 							"_type": "span",
-							"text": "Get notified when new posts are published. No spam, unsubscribe anytime.",
+							"text": "Nhận thông báo khi có bài viết mới. Không spam, hủy đăng ký bất cứ lúc nào.",
 							"_key": "k3"
 						}
 					],
@@ -252,9 +252,9 @@
 		},
 		{
 			"slug": "about-author",
-			"title": "About the Author",
-			"description": "Brief author bio for use in posts or pages",
-			"keywords": ["author", "bio", "about"],
+			"title": "Về Tác giả",
+			"description": "Tiểu sử tác giả ngắn gọn cho bài viết hoặc trang",
+			"keywords": ["tác giả", "tiểu sử", "giới thiệu"],
 			"source": "theme",
 			"content": [
 				{
@@ -263,7 +263,7 @@
 					"children": [
 						{
 							"_type": "span",
-							"text": "A software developer who writes about building things on the web. Based somewhere with good coffee and reliable internet.",
+							"text": "Một lập trình viên viết về việc xây dựng mọi thứ trên web. Sống ở đâu đó có cà phê ngon và internet ổn định.",
 							"_key": "k1"
 						}
 					],
@@ -279,7 +279,7 @@
 				"slug": "about",
 				"status": "published",
 				"data": {
-					"title": "About",
+					"title": "Giới thiệu",
 					"content": [
 						{
 							"_type": "block",
@@ -287,7 +287,7 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "A place for writing about software, design, and the occasional stray thought. No posting schedule, no newsletter funnel. Just things I wanted to write down.",
+									"text": "Nơi viết về phần mềm, thiết kế và đôi khi là những suy nghĩ vu vơ. Không có lịch đăng bài, không có kênh nhận tin. Chỉ là những điều tôi muốn ghi lại.",
 									"_key": "k1"
 								}
 							],
@@ -299,7 +299,7 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "Built with Astro and EmDash. The source is open if you want to see how it works.",
+									"text": "Được xây dựng bằng Astro và EmDash. Mã nguồn mở nếu bạn muốn xem cách nó hoạt động.",
 									"_key": "k3"
 								}
 							],
@@ -315,12 +315,12 @@
 				"slug": "building-for-the-long-term",
 				"status": "published",
 				"data": {
-					"title": "Building for the Long Term",
-					"excerpt": "The frameworks will change. The databases will change. What survives is the clarity of your thinking.",
+					"title": "Xây dựng cho đường dài",
+					"excerpt": "Framework sẽ thay đổi. Cơ sở dữ liệu sẽ thay đổi. Điều còn lại là sự rõ ràng trong tư duy của bạn.",
 					"featured_image": {
 						"$media": {
 							"url": "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=1200&h=800&fit=crop",
-							"alt": "Code on a monitor in a dark room",
+							"alt": "Mã code trên màn hình trong phòng tối",
 							"filename": "building-long-term.jpg"
 						}
 					},
@@ -331,7 +331,7 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "Every few years the industry collectively decides that everything we've been doing is wrong and there's a better way. New frameworks, new paradigms, new build tools. The churn is relentless, and if you're not careful, you spend more time migrating than building.",
+									"text": "Cứ vài năm ngành công nghệ lại đồng loạt kết luận rằng mọi thứ chúng ta đang làm là sai và có cách tốt hơn. Framework mới, mô hình mới, công cụ build mới. Sự xáo trộn không ngừng, và nếu bạn không cẩn thận, bạn dành nhiều thời gian để di chuyển hơn là xây dựng.",
 									"_key": "k1"
 								}
 							],
@@ -343,7 +343,7 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "I've been writing software long enough to have seen several of these cycles. jQuery to Backbone to Angular to React to whatever comes next. Each transition felt urgent at the time. Looking back, the things that actually mattered were rarely about the framework.",
+									"text": "Tôi đã viết phần mềm đủ lâu để chứng kiến vài chu kỳ như vậy. jQuery đến Backbone đến Angular đến React đến bất cứ thứ gì tiếp theo. Mỗi lần chuyển đổi đều có vẻ cấp bách lúc đó. Nhìn lại, những thứ thực sự quan trọng hiếm khi liên quan đến framework.",
 									"_key": "k3"
 								}
 							],
@@ -355,7 +355,7 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "What survives",
+									"text": "Thứ còn lại",
 									"_key": "k5"
 								}
 							],
@@ -367,7 +367,7 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "Clean data models survive. Clear boundaries between systems survive. Good naming survives. The decision to keep things simple when you could have made them clever - that definitely survives.",
+									"text": "Mô hình dữ liệu sạch sẽ tồn tại. Ranh giới rõ ràng giữa các hệ thống tồn tại. Cách đặt tên tốt tồn tại. Quyết định giữ mọi thứ đơn giản khi bạn có thể làm chúng phức tạp - điều đó chắc chắn tồn tại.",
 									"_key": "k7"
 								}
 							],
@@ -379,7 +379,7 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "What doesn't survive is code that was written to impress, abstractions built for problems that never materialized, and architectures designed around a framework's opinions rather than the domain's reality.",
+									"text": "Thứ không tồn tại là code viết ra để gây ấn tượng, những lớp trừu tượng xây cho vấn đề chưa bao giờ xảy ra, và kiến trúc thiết kế theo ý kiến của framework thay vì thực tế của lĩnh vực.",
 									"_key": "k9"
 								}
 							],
@@ -391,7 +391,7 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "The best code I've written is boring. It reads like prose, does one thing well, and doesn't require a PhD in category theory to understand. The worst code I've written was technically impressive at the time.",
+									"text": "Code tốt nhất tôi từng viết rất nhàm chán. Nó đọc như văn xuôi, làm tốt một việc và không cần bằng tiến sĩ lý thuyết phạm trù để hiểu. Code tệ nhất tôi từng viết lại ấn tượng về mặt kỹ thuật vào thời điểm đó.",
 									"_key": "k11"
 								}
 							],
@@ -405,7 +405,7 @@
 					},
 					{
 						"byline": "byline-guest",
-						"roleLabel": "Guest essay"
+						"roleLabel": "Bài viết khách"
 					}
 				],
 				"taxonomies": {
@@ -418,12 +418,12 @@
 				"slug": "the-case-for-static",
 				"status": "published",
 				"data": {
-					"title": "The Case for Static",
-					"excerpt": "Static sites aren't a step backwards. They're what you get when you take performance and simplicity seriously.",
+					"title": "Lập luận cho site tĩnh",
+					"excerpt": "Site tĩnh không phải là bước lùi. Đó là điều bạn nhận được khi coi trọng hiệu suất và sự đơn giản.",
 					"featured_image": {
 						"$media": {
 							"url": "https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=1200&h=800&fit=crop",
-							"alt": "Laptop and coffee on a wooden table",
+							"alt": "Laptop và cà phê trên bàn gỗ",
 							"filename": "case-for-static.jpg"
 						}
 					},
@@ -434,7 +434,7 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "There's a certain irony in the fact that the web started static, went dynamic, and is now swinging back toward static again. But the static sites of today aren't the hand-coded HTML pages of 1998. They're generated, optimized, and deployed to edge networks that serve them in milliseconds.",
+									"text": "Có một sự mỉa mai nhất định khi web bắt đầu tĩnh, chuyển sang động, và giờ lại quay về tĩnh. Nhưng site tĩnh ngày nay không phải là những trang HTML viết tay năm 1998. Chúng được tạo ra, tối ưu hóa và triển khai lên mạng biên phục vụ trong mili giây.",
 									"_key": "k1"
 								}
 							],
@@ -446,7 +446,7 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "The pitch for server-rendered everything was compelling: dynamic content, personalization, real-time data. But most sites don't need most of that most of the time. A blog post doesn't need to be rendered on every request. A product page doesn't change every second.",
+									"text": "Lời kêu gọi render mọi thứ phía server rất thuyết phục: nội dung động, cá nhân hóa, dữ liệu thời gian thực. Nhưng hầu hết các site không cần hầu hết những thứ đó hầu hết thời gian. Một bài blog không cần render lại mỗi request. Một trang sản phẩm không thay đổi mỗi giây.",
 									"_key": "k3"
 								}
 							],
@@ -458,7 +458,7 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "The performance argument",
+									"text": "Lập luận về hiệu suất",
 									"_key": "k5"
 								}
 							],
@@ -470,7 +470,7 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "A static file served from a CDN is as fast as the web gets. No cold starts, no database queries, no server-side rendering overhead. The Time to First Byte is essentially the network latency to your nearest edge node. You can't beat physics.",
+									"text": "Một file tĩnh được phục vụ từ CDN là nhanh nhất mà web có thể đạt được. Không khởi động lạnh, không truy vấn cơ sở dữ liệu, không chi phí render phía server. Time to First Byte thực chất là độ trễ mạng đến node biên gần nhất. Bạn không thể đánh bại vật lý.",
 									"_key": "k7"
 								}
 							],
@@ -482,7 +482,7 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "And when you do need dynamic behavior, you can add it surgically. An island of interactivity in a sea of static HTML. The best of both worlds, without paying the cost of either at all times.",
+									"text": "Và khi bạn thực sự cần hành vi động, bạn có thể thêm vào một cách phẫu thuật. Một hòn đảo tương tác trong biển HTML tĩnh. Điều tốt nhất của cả hai thế giới, mà không phải trả chi phí của bên nào mọi lúc.",
 									"_key": "k9"
 								}
 							],
@@ -505,12 +505,12 @@
 				"slug": "learning-in-public",
 				"status": "published",
 				"data": {
-					"title": "Learning in Public",
-					"excerpt": "Writing about what you're learning is the fastest way to find out what you don't actually understand.",
+					"title": "Học tập công khai",
+					"excerpt": "Viết về những gì bạn đang học là cách nhanh nhất để phát hiện ra điều bạn thực sự chưa hiểu.",
 					"featured_image": {
 						"$media": {
 							"url": "https://images.unsplash.com/photo-1432821596592-e2c18b78144f?w=1200&h=800&fit=crop",
-							"alt": "Notebook and pen on a desk",
+							"alt": "Sổ và bút trên bàn",
 							"filename": "learning-in-public.jpg"
 						}
 					},
@@ -521,7 +521,7 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "I started writing about things I was learning not because I had anything original to say, but because I kept forgetting what I'd figured out. The blog posts were notes to my future self, published publicly more out of laziness than courage.",
+									"text": "Tôi bắt đầu viết về những thứ mình đang học không phải vì tôi có điều gì độc đáo để nói, mà vì tôi cứ quên mất những gì mình đã tìm ra. Những bài blog là ghi chú cho bản thân tương lai, được xuất bản công khai vì lười hơn là vì can đảm.",
 									"_key": "k1"
 								}
 							],
@@ -533,7 +533,7 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "What I didn't expect was how much the writing itself would accelerate the learning. There's a particular kind of clarity that comes from trying to explain something to someone else. The gaps in your understanding, which you can happily ignore when the knowledge lives only in your head, become painfully obvious when you try to put it into sentences.",
+									"text": "Điều tôi không ngờ là chính việc viết lại thúc đẩy việc học. Có một sự rõ ràng đặc biệt đến từ việc cố giải thích điều gì đó cho người khác. Những lỗ hổng trong hiểu biết của bạn, thứ bạn có thể vui vẻ bỏ qua khi kiến thức chỉ nằm trong đầu, trở nên rõ ràng đến đau đớn khi bạn cố diễn đạt thành câu.",
 									"_key": "k3"
 								}
 							],
@@ -545,7 +545,7 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "The fear of being wrong",
+									"text": "Nỗi sợ sai",
 									"_key": "k5"
 								}
 							],
@@ -557,7 +557,7 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "The biggest barrier isn't time or writing skill. It's the fear of publishing something that turns out to be wrong. But here's the thing: being wrong publicly is one of the most efficient ways to learn. Someone will correct you, often kindly, and you'll remember that correction forever.",
+									"text": "Rào cản lớn nhất không phải là thời gian hay kỹ năng viết. Mà là nỗi sợ xuất bản thứ gì đó hóa ra lại sai. Nhưng đây là vấn đề: sai công khai là một trong những cách học hiệu quả nhất. Ai đó sẽ sửa cho bạn, thường là tử tế, và bạn sẽ nhớ sự sửa chữa đó mãi mãi.",
 									"_key": "k7"
 								}
 							],
@@ -569,7 +569,7 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "The posts that helped me most weren't written by experts. They were written by people one step ahead of me on the same path, in language that hadn't yet been polished into abstraction. There's a place for that kind of writing, and it's more valuable than most people realize.",
+									"text": "Những bài viết giúp tôi nhiều nhất không được viết bởi chuyên gia. Chúng được viết bởi những người đi trước tôi một bước trên cùng con đường, bằng ngôn ngữ chưa được đánh bóng thành trừu tượng. Có một chỗ cho kiểu viết đó, và nó có giá trị hơn hầu hết mọi người nhận ra.",
 									"_key": "k9"
 								}
 							],
@@ -587,12 +587,12 @@
 				"slug": "small-tools-big-impact",
 				"status": "published",
 				"data": {
-					"title": "Small Tools, Big Impact",
-					"excerpt": "The best developer tools do one thing well and get out of your way. A love letter to focused software.",
+					"title": "Công cụ nhỏ, Tác động lớn",
+					"excerpt": "Công cụ lập trình tốt nhất làm tốt một việc và tránh đường cho bạn. Một bức thư tình gửi đến phần mềm tập trung.",
 					"featured_image": {
 						"$media": {
 							"url": "https://images.unsplash.com/photo-1575026615908-666710ae5e47?w=1200&h=800&fit=crop",
-							"alt": "Wrenches and hand tools hanging on a workshop wall",
+							"alt": "Cờ lê và dụng cụ cầm tay treo trên tường xưởng",
 							"filename": "small-tools.jpg"
 						}
 					},
@@ -603,7 +603,7 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "There's a class of software that doesn't get enough appreciation. Not the frameworks or the platforms or the IDEs, but the small, sharp tools that solve one problem so well you stop thinking about them. They become invisible, which is the highest compliment you can pay a tool.",
+									"text": "Có một loại phần mềm không nhận được đủ sự trân trọng. Không phải framework hay nền tảng hay IDE, mà là những công cụ nhỏ, sắc bén giải quyết một vấn đề tốt đến mức bạn ngừng nghĩ về chúng. Chúng trở nên vô hình, đó là lời khen cao nhất bạn có thể dành cho một công cụ.",
 									"_key": "k1"
 								}
 							],
@@ -615,7 +615,7 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "I'm talking about things like ripgrep, which searches code so fast it changed how I think about searching. Or jq, which makes JSON feel like a first-class data format in the terminal. Or curl, which has been quietly powering the internet's plumbing for decades.",
+									"text": "Tôi đang nói về những thứ như ripgrep, tìm kiếm code nhanh đến mức thay đổi cách tôi nghĩ về tìm kiếm. Hay jq, khiến JSON cảm thấy như định dạng dữ liệu hạng nhất trong terminal. Hay curl, đã âm thầm vận hành hệ thống ống nước của internet suốt nhiều thập kỷ.",
 									"_key": "k3"
 								}
 							],
@@ -627,7 +627,7 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "The Unix philosophy, revisited",
+									"text": "Triết lý Unix, nhìn lại",
 									"_key": "k5"
 								}
 							],
@@ -639,7 +639,7 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "Do one thing well. The advice is old enough to be a cliche, but the best modern tools still follow it. They don't try to be platforms. They don't have plugin ecosystems or configuration languages or startup wizards. They do their job and they compose with other tools that do theirs.",
+									"text": "Làm tốt một việc. Lời khuyên đã cũ đến mức trở thành sáo ngữ, nhưng những công cụ hiện đại tốt nhất vẫn tuân theo. Chúng không cố làm nền tảng. Chúng không có hệ sinh thái plugin hay ngôn ngữ cấu hình hay trình khởi động. Chúng làm việc của mình và kết hợp với các công cụ khác làm việc của chúng.",
 									"_key": "k7"
 								}
 							],
@@ -651,7 +651,7 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "The temptation is always to add more. One more feature, one more option, one more integration. But every addition is a decision someone has to make, a path through the code that has to be maintained, a thing that can break. The best tools resist this. They stay small, and in staying small, they stay reliable.",
+									"text": "Sự cám dỗ luôn là thêm vào. Thêm một tính năng, thêm một tùy chọn, thêm một tích hợp. Nhưng mỗi bổ sung là một quyết định ai đó phải đưa ra, một đường dẫn qua code phải được bảo trì, một thứ có thể hỏng. Công cụ tốt nhất chống lại điều này. Chúng giữ mình nhỏ bé, và trong sự nhỏ bé, chúng giữ được độ tin cậy.",
 									"_key": "k9"
 								}
 							],
@@ -669,12 +669,12 @@
 				"slug": "designing-with-constraints",
 				"status": "published",
 				"data": {
-					"title": "Designing with Constraints",
-					"excerpt": "Limitations aren't obstacles to creativity. They're the structure that makes creativity possible.",
+					"title": "Thiết kế với Ràng buộc",
+					"excerpt": "Giới hạn không phải là rào cản cho sáng tạo. Chúng là cấu trúc khiến sáng tạo trở nên khả thi.",
 					"featured_image": {
 						"$media": {
 							"url": "https://images.unsplash.com/photo-1513542789411-b6a5d4f31634?w=1200&h=800&fit=crop",
-							"alt": "Pencils and design tools on a desk",
+							"alt": "Bút chì và dụng cụ thiết kế trên bàn",
 							"filename": "designing-with-constraints.jpg"
 						}
 					},
@@ -685,7 +685,7 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "Give a designer a blank canvas and unlimited time, and they'll often produce something mediocre. Give them a tight brief, a small screen, and a deadline, and they'll surprise you. This isn't a paradox - it's how creativity actually works.",
+									"text": "Đưa cho nhà thiết kế một khung vẽ trắng và thời gian không giới hạn, họ thường tạo ra thứ gì đó tầm thường. Đưa cho họ một bản tóm tắt chặt chẽ, màn hình nhỏ và thời hạn, họ sẽ khiến bạn ngạc nhiên. Đây không phải nghịch lý - đây là cách sáng tạo thực sự hoạt động.",
 									"_key": "k1"
 								}
 							],
@@ -697,7 +697,7 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "Constraints force decisions. When you can't use more than two typefaces, you have to choose carefully. When the page has to load in under a second, every element earns its place. When the interface has to work on a 320px screen, you discover what's truly essential.",
+									"text": "Ràng buộc ép buộc quyết định. Khi bạn không thể dùng quá hai kiểu chữ, bạn phải chọn cẩn thận. Khi trang phải tải dưới một giây, mỗi phần tử phải xứng đáng với vị trí của nó. Khi giao diện phải hoạt động trên màn hình 320px, bạn khám phá ra điều gì thực sự thiết yếu.",
 									"_key": "k3"
 								}
 							],
@@ -709,7 +709,7 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "Embracing the box",
+									"text": "Ôm lấy chiếc hộp",
 									"_key": "k5"
 								}
 							],
@@ -721,7 +721,7 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "The web itself is a constraint. HTML flows in one direction. CSS has a box model. Browsers have viewport sizes and font rendering quirks. You can fight these constraints or you can work with them, and the results are dramatically different.",
+									"text": "Bản thân web là một ràng buộc. HTML chảy theo một hướng. CSS có box model. Trình duyệt có kích thước viewport và đặc điểm render font. Bạn có thể chống lại những ràng buộc này hoặc làm việc với chúng, và kết quả khác biệt rõ rệt.",
 									"_key": "k7"
 								}
 							],
@@ -733,7 +733,7 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "The designs I admire most don't look like they were forced through a framework. They look like they grew naturally from the medium, respecting its grain rather than working against it. That only happens when you treat constraints as creative partners rather than enemies.",
+									"text": "Những thiết kế tôi ngưỡng mộ nhất không trông như bị ép qua một framework. Chúng trông như mọc tự nhiên từ chính phương tiện, tôn trọng thớ gỗ của nó thay vì chống lại. Điều đó chỉ xảy ra khi bạn coi ràng buộc là đối tác sáng tạo thay vì kẻ thù.",
 									"_key": "k9"
 								}
 							],
@@ -751,12 +751,12 @@
 				"slug": "a-weekend-with-a-side-project",
 				"status": "published",
 				"data": {
-					"title": "A Weekend with a Side Project",
-					"excerpt": "No stakeholders, no deadlines, no Jira tickets. Just you and a dumb idea that might turn into something.",
+					"title": "Một cuối tuần với Dự án phụ",
+					"excerpt": "Không bên liên quan, không thời hạn, không vé Jira. Chỉ có bạn và một ý tưởng ngớ ngẩn có thể trở thành thứ gì đó.",
 					"featured_image": {
 						"$media": {
 							"url": "https://images.unsplash.com/photo-1542831371-29b0f74f9713?w=1200&h=800&fit=crop",
-							"alt": "Code on a screen with a dark theme",
+							"alt": "Code trên màn hình với theme tối",
 							"filename": "weekend-side-project.jpg"
 						}
 					},
@@ -767,7 +767,7 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "Saturday morning. Coffee's made, the house is quiet, and I've got an idea that's been nagging at me all week. Not a good idea, necessarily - just a persistent one. A small tool that does a thing I keep doing manually. How hard could it be?",
+									"text": "Sáng thứ Bảy. Cà phê đã pha, nhà yên tĩnh, và tôi có một ý tưởng đã làm phiền tôi cả tuần. Không hẳn là ý tưởng hay - chỉ là một ý tưởng dai dẳng. Một công cụ nhỏ làm điều tôi vẫn làm thủ công. Khó đến mức nào chứ?",
 									"_key": "k1"
 								}
 							],
@@ -779,7 +779,7 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "This is the best kind of programming. No requirements document, no sprint planning, no pull request reviews. Just a text editor and a problem. The freedom to make terrible architectural decisions, rewrite everything twice, and follow tangents that turn out to be dead ends.",
+									"text": "Đây là kiểu lập trình tuyệt nhất. Không tài liệu yêu cầu, không kế hoạch sprint, không review pull request. Chỉ có editor và vấn đề. Sự tự do để đưa ra quyết định kiến trúc tồi tệ, viết lại mọi thứ hai lần, và theo đuổi những nhánh hóa ra là ngõ cụt.",
 									"_key": "k3"
 								}
 							],
@@ -791,7 +791,7 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "Why side projects matter",
+									"text": "Tại sao dự án phụ quan trọng",
 									"_key": "k5"
 								}
 							],
@@ -803,7 +803,7 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "Side projects are where you learn things your day job would never teach you. Not because the problems are harder, but because you're free to take risks. Try a language you've never used. Build something without a framework. Deploy to a platform you've only read about. The stakes are zero, which makes the learning maximum.",
+									"text": "Dự án phụ là nơi bạn học những thứ công việc hàng ngày không bao giờ dạy bạn. Không phải vì vấn đề khó hơn, mà vì bạn tự do chấp nhận rủi ro. Thử một ngôn ngữ bạn chưa từng dùng. Xây dựng thứ gì đó không có framework. Triển khai lên nền tảng bạn mới chỉ đọc về. Rủi ro bằng không, khiến việc học đạt tối đa.",
 									"_key": "k7"
 								}
 							],
@@ -815,7 +815,7 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "By Sunday evening, the thing sort of works. It's rough, the error handling is nonexistent, and the README is a single sentence. But it solves the problem I set out to solve, and I learned three things I didn't know on Friday. Not a bad weekend.",
+									"text": "Đến tối Chủ nhật, thứ đó kiểu như hoạt động. Nó thô, xử lý lỗi không tồn tại, và README chỉ có một câu. Nhưng nó giải quyết vấn đề tôi đặt ra, và tôi đã học được ba điều tôi chưa biết vào thứ Sáu. Một cuối tuần không tệ.",
 									"_key": "k9"
 								}
 							],
@@ -833,12 +833,12 @@
 				"slug": "notes-on-simplicity",
 				"status": "published",
 				"data": {
-					"title": "Notes on Simplicity",
-					"excerpt": "Simplicity isn't the absence of complexity. It's the result of understanding a problem well enough to solve it cleanly.",
+					"title": "Ghi chú về Sự đơn giản",
+					"excerpt": "Đơn giản không phải là sự vắng mặt của phức tạp. Đó là kết quả của việc hiểu vấn đề đủ tốt để giải quyết nó một cách sạch sẽ.",
 					"featured_image": {
 						"$media": {
 							"url": "https://images.unsplash.com/photo-1559051668-e1fa58f25786?w=1200&h=800&fit=crop",
-							"alt": "Geometric pattern carved into white paper",
+							"alt": "Họa tiết hình học khắc trên giấy trắng",
 							"filename": "notes-on-simplicity.jpg"
 						}
 					},
@@ -849,7 +849,7 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "Every piece of software starts simple. A few files, a clear purpose, a small surface area. Then features get added, edge cases get handled, and before long you're looking at something that requires a diagram to understand. This isn't inevitable, but it takes discipline to prevent.",
+									"text": "Mọi phần mềm đều bắt đầu đơn giản. Vài file, mục đích rõ ràng, diện tích bề mặt nhỏ. Rồi tính năng được thêm vào, trường hợp ngoại lệ được xử lý, và chẳng mấy chốc bạn nhìn vào thứ cần sơ đồ mới hiểu nổi. Điều này không phải không tránh được, nhưng cần kỷ luật để ngăn chặn.",
 									"_key": "k1"
 								}
 							],
@@ -861,7 +861,7 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "The hard part of simplicity isn't the initial design. It's the ongoing resistance to complication. Every feature request, every bug fix, every refactor is an opportunity to add complexity. Saying no is the most important design skill, and the least celebrated.",
+									"text": "Phần khó của sự đơn giản không phải là thiết kế ban đầu. Mà là sự kháng cự liên tục với sự phức tạp hóa. Mỗi yêu cầu tính năng, mỗi sửa lỗi, mỗi lần tái cấu trúc là một cơ hội để thêm phức tạp. Nói không là kỹ năng thiết kế quan trọng nhất, và ít được tán dương nhất.",
 									"_key": "k3"
 								}
 							],
@@ -873,7 +873,7 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "Removing as a feature",
+									"text": "Loại bỏ như một tính năng",
 									"_key": "k5"
 								}
 							],
@@ -885,7 +885,7 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "The best version of a product often has fewer features than the previous one. Not because features were missing, but because someone had the courage to remove things that weren't earning their keep. Every feature has a cost - in maintenance, in cognitive load, in the weight of the interface.",
+									"text": "Phiên bản tốt nhất của một sản phẩm thường có ít tính năng hơn phiên bản trước. Không phải vì thiếu tính năng, mà vì ai đó có can đảm loại bỏ những thứ không xứng đáng tồn tại. Mỗi tính năng có một cái giá - trong bảo trì, trong tải nhận thức, trong sức nặng của giao diện.",
 									"_key": "k7"
 								}
 							],
@@ -897,7 +897,7 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "Simplicity is a practice, not a destination. You never arrive at simple. You just keep asking: is this necessary? Could this be clearer? Is there a way to solve this problem by removing something instead of adding something? The answer is yes more often than you'd expect.",
+									"text": "Đơn giản là một thực hành, không phải đích đến. Bạn không bao giờ đến được đơn giản. Bạn chỉ tiếp tục hỏi: điều này có cần thiết không? Có thể rõ ràng hơn không? Có cách nào giải quyết vấn đề này bằng cách loại bỏ thứ gì đó thay vì thêm vào không? Câu trả lời là có thường xuyên hơn bạn nghĩ.",
 									"_key": "k9"
 								}
 							],
@@ -915,8 +915,8 @@
 				"slug": "work-in-progress",
 				"status": "draft",
 				"data": {
-					"title": "Work in Progress",
-					"excerpt": "This post is still being written.",
+					"title": "Đang thực hiện",
+					"excerpt": "Bài viết này vẫn đang được viết.",
 					"content": [
 						{
 							"_type": "block",
@@ -924,7 +924,7 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "This is a draft post that won't appear in the public listing.",
+									"text": "Đây là bài nháp sẽ không xuất hiện trong danh sách công khai.",
 									"_key": "k1"
 								}
 							],

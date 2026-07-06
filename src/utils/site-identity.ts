@@ -12,8 +12,8 @@ export interface BlogSiteIdentitySettings {
 	favicon?: MediaReference;
 }
 
-const DEFAULT_SITE_TITLE = "My Blog";
-const DEFAULT_SITE_TAGLINE = "Thoughts, stories, and ideas.";
+const DEFAULT_SITE_TITLE = "Blog của tôi";
+const DEFAULT_SITE_TAGLINE = "Suy nghĩ, câu chuyện và ý tưởng.";
 
 export function resolveBlogSiteIdentity(settings?: BlogSiteIdentitySettings) {
 	return {

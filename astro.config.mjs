@@ -1,5 +1,6 @@
 import cloudflare from "@astrojs/cloudflare";
 import react from "@astrojs/react";
+import tailwindcss from "@tailwindcss/vite";
 import { d1, r2, sandbox } from "@emdash-cms/cloudflare";
 import { formsPlugin } from "@emdash-cms/plugin-forms";
 import webhookNotifier from "@emdash-cms/plugin-webhook-notifier";
@@ -13,10 +14,13 @@ export default defineConfig({
 		layout: "constrained",
 		responsiveStyles: true,
 	},
+	vite: {
+		plugins: [tailwindcss()],
+	},
 	integrations: [
 		react(),
 		emdash({
-			database: d1({ binding: "DB", session: "auto" }),
+			database: d1({ binding: "DB" }),
 			storage: r2({ binding: "MEDIA" }),
 			plugins: [formsPlugin()],
 			sandboxed: [webhookNotifier],
