@@ -1,3 +1,7 @@
+# Single-package workspace (this project root is the only package).
+packages:
+  - "."
+
 # Build scripts: allow only what each runtime needs; rest false so
 # strictDepBuilds (pnpm >=10.26 / 11) passes.
 allowBuilds:
